@@ -23,4 +23,33 @@ public class ThymeleafConfiguration {
         templateResolver.setCacheable(true);
         return templateResolver;
     }
+
+    @Bean
+    public SpringResourceTemplateResolver cssTemplateResolver() {
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setApplicationContext(applicationContext);
+        templateResolver.setPrefix("/WEB-INF/static/css/");
+        templateResolver.setSuffix(".css");
+        templateResolver.setTemplateMode(TemplateMode.CSS);
+        templateResolver.setCacheable(true);
+        return templateResolver;
+    }
+
+
+//    @Bean
+//    public SpringTemplateEngine templateEngine() {
+//        SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+//        templateEngine.setTemplateResolver(thymeleafTemplateResolver());
+//        return templateEngine;
+//    }
+//
+//    @Bean
+//    public ThymeleafViewResolver thymeleafViewResolver() {
+//
+//        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
+//        viewResolver.setTemplateEngine(templateEngine());
+//        viewResolver.setCharacterEncoding("UTF-8");
+//        return viewResolver;
+//    }
+
 }

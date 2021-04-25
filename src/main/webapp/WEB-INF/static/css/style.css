@@ -1,0 +1,14 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 100%;
+    overflow-y: scroll;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: #242828;
+    color: #efedef;
+    margin:0;
+    padding:0;
+}
